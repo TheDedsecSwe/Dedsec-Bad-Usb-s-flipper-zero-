@@ -1,0 +1,42 @@
+DELAY 500
+REM Turn up the volume to max
+CONTROL SHIFT UP
+DELAY 50
+CONTROL SHIFT UP
+DELAY 50
+CONTROL SHIFT UP
+DELAY 50
+CONTROL SHIFT UP
+
+DELAY 200
+REM Open web browser and navigate to the Google Drive download link
+GUI r
+DELAY 200
+STRING https://drive.google.com/uc?export=download&id=1ZfEeCYKvvY1lDUb5WbLE-k8iW0E7Q8Nt
+ENTER
+DELAY 7000
+
+REM Automatically press Enter to confirm the download if prompted
+DELAY 1000
+ENTER
+DELAY 10000  REM Wait for the file to download fully
+
+REM Open the Hämtade filer (Downloads) folder to find the video
+GUI r
+DELAY 200
+STRING explorer
+ENTER
+DELAY 500
+STRING %USERPROFILE%\Hämtade filer
+ENTER
+DELAY 2000
+
+REM Select the 0921 file and open it (since it may not have the extension .mp4)
+STRING 0921
+ENTER
+DELAY 2000  REM Give time for the video player to open
+
+REM Fullscreen the video (ALT + ENTER for most media players)
+ALT ENTER
+
+
