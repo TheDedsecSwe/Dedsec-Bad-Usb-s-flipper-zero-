@@ -19,7 +19,7 @@ DELAY 7000
 REM Automatically press Enter to confirm the download if prompted
 DELAY 1000
 ENTER
-DELAY 10000  REM Wait for the file to download fully
+DELAY 8500  REM Wait for the file to download fully
 
 REM Open the Hämtade filer (Downloads) folder to find the video
 GUI r
